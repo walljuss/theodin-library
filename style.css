@@ -108,3 +108,6 @@ button.removeBook {
   cursor: pointer;
 }
 
+.bookshelf input[type='checkbox'] {
+  margin: 5px;
+}

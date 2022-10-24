@@ -58,16 +58,29 @@ function presentBookshelf(Library, libBoard) {
       singleBook.appendChild(bookInfoValues);
       }
 
-      /* not sure */
+    }
+      /* checkbox read */
       const ifread = document.createElement('form');
       const readLabel = document.createElement('label');
       readLabel.setAttribute('id', 'ifread');
+      readLabel.innerHTML = "Already read";
       const readCheckbox = document.createElement('input');
       readCheckbox.setAttribute('type', 'checkbox');
       readCheckbox.setAttribute('name', 'ifread');
+      if (Library[index]['ifread'] === 'yes') {
+        readCheckbox.setAttribute('checked', '');
+      }
+      ifread.appendChild(readLabel);
+      ifread.appendChild(readCheckbox);
+      singleBook.appendChild(ifread);
+      ifread.addEventListener('change', () => {
+        if (Library[index]['ifread'] === 'yes') {
+          (Library[index]['ifread'] = 'no')
+        } else {
+          (Library[index]['ifread'] = 'yes')
+        }
+      })
 
-
-    }
       /*delete button*/
       const delButton = document.createElement('button');
       delButton.innerHTML = 'Remove';
