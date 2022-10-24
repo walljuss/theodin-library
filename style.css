@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+
+.header {
+  grid-row: 1;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(24, 9, 9, 0.7);
+}
+
+.bookInfo {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  background-color: paleturquoise;
+  margin-top: 100px;
+  height: 60%;
+}
+
+button.closeButton, button.removeBook {
+  justify-self: end;
+  margin: 4px;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+
+button.removeBook {
+  margin-top: 20px;  
+}
+
+.bookInfo > form{
+  display: grid;
+  background-color: paleturquoise;
+  margin: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+
+
+.bookshelf {
+  background-color: lightsalmon;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleBook {
+  margin: 10px;
+  background-color: lightblue;
+  padding: 30px;
+}
+
+.singleBook p {
+  padding: 5px;
+}
+
+.singleBook p.bookInfoTitles {
+  color:rgba(24, 9, 9, 0.7);
+  font-size: 16px;
+}
+
+.singleBook p.bookInfoValues {
+  color: rgb(7, 7, 198);
+  font-size: 20px;
+}
+
+
+
+.header > button {
+  background-color: rgb(145, 46, 7);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+
+.header > button:hover {
+  background-color: rgb(185, 96, 61);
+  cursor: pointer;
+}
+
